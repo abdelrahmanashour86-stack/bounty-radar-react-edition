@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer base {
+    :root {
+        --color-bg-color: #fdfbfb;
+        --color-container: #f0eaea;
+        --color-text-color: #160404;
+        --color-important: #df0606;
+        --color-hover: #b50505;
+        scroll-behavior: smooth;
+    }
+
+    .dark {
+        --color-bg-color: #160404;
+        --color-container: #4d4847;
+        --color-text-color: #eee;
+        --color-important: #df0606;
+        --color-hover: #7a0809;
+    }
+
+    body {
+        @apply dark:bg-(--color-bg-color) transition-all duration-300;
+    }
+    h2{
+        @apply text-3xl font-extrabold text-center p-7 sm:text-5xl text-(--color-text-color)
+    }
+    .all {
+        @apply min-h-screen mt-20 mb-7  w-[95%] m-auto rounded-3xl bg-(--color-container)
+    }
+}

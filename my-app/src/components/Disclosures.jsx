@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import ServerError from "./ServerError";
 import Loading from "./Loading";
 import { toast } from "react-toastify";
 
-const Disclosures = ({ disclosures, dark, load }) => {
+const Disclosures = ({ disclosures, load }) => {
   const [query, setQuery] = useState("");
-  const [filterd, setFilterd] = useState([]);
   const imageRegex = /<img[^>]*src=["']([^"']+)["'][^>]*>/i;
   useEffect(() => {
     if (!load) return;
@@ -48,7 +46,7 @@ const Disclosures = ({ disclosures, dark, load }) => {
                   : "https://placehold.co/600x400/1e1e1e/fff?text=Bug+Bounty+Report";
                 return (
                   <div
-                    className="card relative hover:shadow-[0_0_10px_var(--color-hover)] hover:scale-104 min-h-120 justify-around flex-col w-[95%] lg:last:col-auto md:last:col-start-2 bg-(--color-bg-color) block max-w-sm border border-(--color-hover) rounded-2xl overflow-hidden shadow-xs transition-all duration-300 m-auto"
+                    className="card relative hover:shadow-[0_0_10px_var(--color-hover)] hover:scale-104 min-h-120 justify-around flex-col w-[95%] [&:nth-child(9)]:lg:col-start-2 bg-(--color-bg-color) block max-w-sm border border-(--color-hover) rounded-2xl overflow-hidden shadow-xs transition-all duration-300 m-auto"
                     key={e.guid}
                   >
                     <a href={e.link}>

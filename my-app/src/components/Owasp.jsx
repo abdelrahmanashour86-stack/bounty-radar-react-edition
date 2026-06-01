@@ -4,7 +4,6 @@ import ServerError from "./ServerError";
 import { toast } from "react-toastify";
 
 const Owasp = ({ owasp, loaded }) => {
-    let counter =1;
     useEffect(()=>{
         if (!loaded) return;
            else owasp.length > 0 ? toast.success("Welcome to OWASP 😎", { toastId: "owasp-success" }) : toast.error("Couldn't load OWASP, Please try again later", { toastId: "owasp-failure" })
@@ -19,12 +18,12 @@ const Owasp = ({ owasp, loaded }) => {
         loaded ?owasp.length >0 ? 
         <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 gap-6 max-w-[95%] lg:grid-cols-4">
 
-            {owasp.map((e)=>(
+            {owasp.map((e ,i)=>(
     
                 
                 <div className=" w-lg  px-8 py-8 mx-auto bg-(--color-bg-color) shadow-xl text-(--color-important) hover:shadow-[0_0_10px_var(--color-hover)] hover:scale-104 transition-all lg:nth-9:col-start-2 max-w-[95%] rounded-4xl" key={e.id}>
               <div className="max-w-md mx-auto space-y-6 ">
-                <h3 className="text-2xl font-bold">{counter++}. {e.name}</h3>
+                <h3 className="text-2xl font-bold">{++i}. {e.name}</h3>
                 <div className="text-base leading-3">
                   <p className="font-normal text-(--color-text-color) leading-5">
                     {e.description}
@@ -33,13 +32,13 @@ const Owasp = ({ owasp, loaded }) => {
     
                 <div className="text-base leading-3">
                   <p className="font-normal text-(--color-text-color) leading-5">
-                    {e.examples[0]}
+                    {e.examples?.[0]}
                   </p>
                 </div>
     
                 <div className="text-base leading-3">
                   <p className="font-normal text-(--color-text-color) leading-5">
-                    {e.examples[1]}
+                    {e.examples?.[1] }
                   </p>
                 </div>
     

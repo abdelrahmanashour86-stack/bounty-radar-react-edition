@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "../../lib/utils";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+// You can remove the Tabler icons import since we are drawing the lines with Framer Motion now
 import {
   motion,
   AnimatePresence,
@@ -9,7 +9,6 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
-
 
 export const Navbar = ({
   children,
@@ -131,6 +130,7 @@ export const MobileNav = ({
         type: "spring",
         stiffness: 200,
         damping: 50,
+        
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
@@ -167,6 +167,7 @@ export const MobileNavMenu = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          
           className={cn(
             "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
             className
@@ -178,14 +179,33 @@ export const MobileNavMenu = ({
   );
 };
 
+/* --- ANIMATED TOGGLE COMPONENT UPDATED HERE --- */
 export const MobileNavToggle = ({
   isOpen,
   onClick
 }) => {
-  return isOpen ? (
-    <IconX className="text-black dark:text-white" onClick={onClick} />
-  ) : (
-    <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+  return (
+    <button
+      onClick={onClick}
+      className="flex flex-col justify-center items-center w-8 h-8 gap-[5px] bg-transparent rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors focus:outline-none p-1"
+      aria-label="Toggle Menu"
+    >
+      <motion.span
+        animate={isOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="w-5 h-[2px] bg-black dark:bg-white block rounded-full"
+      />
+      <motion.span
+        animate={isOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+        transition={{ duration: 0.2, ease: "easeInOut" }}
+        className="w-5 h-[2px] bg-black dark:bg-white block rounded-full"
+      />
+      <motion.span
+        animate={isOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="w-5 h-[2px] bg-black dark:bg-white block rounded-full"
+      />
+    </button>
   );
 };
 

@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import ServerError from "./ServerError";
 import Loading from "./Loading";
 import { toast } from "react-toastify";
 
-const Radar = ({ news, dark, load }) => {
+const Radar = ({ news, load }) => {
   useEffect(()=> {
     if(!load) return;
     else news.length > 0
     ? toast("Welcome to Radar 😎", { toastId: "radar-success" })
     : toast.error("Couldn't load news, Please try again later", { toastId: "radar-failure" })
-  })
+  },[])
   
   return (
     <React.Fragment>

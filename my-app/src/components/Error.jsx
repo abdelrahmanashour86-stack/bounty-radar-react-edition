@@ -321,7 +321,7 @@ const Error = () => {
             <p className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider text-(--color-important) mt-8">
               404
             </p>
-            <p className="md:text-lg xl:text-xl text-(--color-hover) mt-4">
+            <p className="md:text-lg text-center xl:text-xl text-(--color-hover) mt-4">
               Whoops, Sorry we couldn't find the page you're looking for.
             </p>
             <a href="/" class="px-5 inline py-3 text-sm font-medium leading-5 mt-6 shadow-2xl text-(--color-text-color) transition-all duration-400 border border-transparent rounded-lg focus:outline-none bg-(--color-important) active:bg-red-600 hover:bg-(--color-hover)">back to homepage</a>

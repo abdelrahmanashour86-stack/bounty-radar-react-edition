@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# 🎯 Bounty Radar (React Edition)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A dynamic threat intelligence and bug bounty aggregator designed for security researchers, completely re-architected for maximum performance and scalability.
 
-## Available Scripts
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-In the project directory, you can run:
+## 🔗 Live Demo
+**[Experience Bounty Radar Live](https://bounty-radar-react-edition.vercel.app/)**
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Overview
+Bounty Radar is a professional portfolio platform tailored for showcasing cybersecurity findings, vulnerability write-ups, and active testing metrics. Originally built with Vanilla JavaScript, this **React Edition** represents a complete rebuild from the ground up to leverage a component-based architecture, modern state management, and an ultra-fast development environment.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Key Features
+* **Lightning-Fast Build:** Migrated from Create React App (CRA) to **Vite**, dropping build times to approximately 1 second and resolving legacy dependency conflicts.
+* **Next-Gen Styling:** Fully styled using the latest **Tailwind CSS (v4)**, ensuring a sleek, lightweight, and fully responsive design across all devices.
+* **Seamless Theme Toggling:** Built-in **Dark/Light Mode** engineered using Custom CSS Variables (`@custom-variant`) for a flawless, flicker-free transition.
+* **Robust UX & Edge Cases:** Includes custom-designed **404 (Not Found)** and **500 (Server Error)** pages, alongside smooth loading states to handle edge cases gracefully.
+* **Red Team Aesthetics:** A visually striking interface designed specifically for hackers, pentesters, and security researchers.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
+* **Core:** React.js
+* **Build Tool:** Vite
+* **Styling:** Tailwind CSS v4
+* **Deployment:** Vercel
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💻 Local Setup & Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this project locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone the repository:**
+```bash
+   git clone [https://github.com/abdelrahmanashour86-stack/bounty-radar-react-edition.git](https://github.com/abdelrahmanashour86-stack/bounty-radar-react-edition.git)

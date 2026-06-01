@@ -505,6 +505,9 @@
   .h-80 {
     height: calc(var(--spacing) * 80);
   }
+  .h-\[2px\] {
+    height: 2px;
+  }
   .h-full {
     height: 100%;
   }
@@ -576,6 +579,9 @@
   }
   .shrink {
     flex-shrink: 1;
+  }
+  .flex-grow {
+    flex-grow: 1;
   }
   .grow {
     flex-grow: 1;
@@ -662,6 +668,9 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  .gap-\[5px\] {
+    gap: 5px;
   }
   .space-y-6 {
     :where(& > :not(:last-child)) {
@@ -875,6 +884,9 @@
   }
   .bg-\[var\(--color-bg-color\)\] {
     background-color: var(--color-bg-color);
+  }
+  .bg-\[var\(--color-text-color\)\] {
+    background-color: var(--color-text-color);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -1729,6 +1741,22 @@
       }
     }
   }
+  .lg\:last\:col-start-2 {
+    @media (width >= 64rem) {
+      &:last-child {
+        grid-column-start: 2;
+      }
+    }
+  }
+  .lg\:last\:last\:col-start-2 {
+    @media (width >= 64rem) {
+      &:last-child {
+        &:last-child {
+          grid-column-start: 2;
+        }
+      }
+    }
+  }
   .lg\:nth-9\:col-start-2 {
     @media (width >= 64rem) {
       &:nth-child(9) {
@@ -1793,6 +1821,11 @@
       background-color: transparent;
     }
   }
+  .dark\:bg-white {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-white);
+    }
+  }
   .dark\:bg-white\/10 {
     &:where(.dark, .dark *) {
       background-color: color-mix(in srgb, #fff 10%, transparent);
@@ -1825,6 +1858,13 @@
             background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
           }
         }
+      }
+    }
+  }
+  .\[\&\:nth-child\(9\)\]\:lg\:col-start-2 {
+    &:nth-child(9) {
+      @media (width >= 64rem) {
+        grid-column-start: 2;
       }
     }
   }

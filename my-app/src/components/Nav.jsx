@@ -108,7 +108,7 @@ const Nav = ({ dark, theme, news }) => {
               <MobileNavToggle
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
-               />
+              />
             </div>
           </MobileNavHeader>
 

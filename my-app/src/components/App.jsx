@@ -17,7 +17,7 @@ import Disclosures from "./Disclosures";
 const App = () => {
   const [news, setNews] = useState({ news: [], loaded: false });
   const [owasp, setOwasp] = useState({ owasp: [], loaded: false });
-  const [disclosures, setDiclosures] = useState({
+  const [disclosures, setDisclosures] = useState({
     disclosures: [],
     loaded: false,
   });
@@ -54,9 +54,9 @@ const App = () => {
         const latestDisclosures = await axios.get(
           "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Ftag%2Fbug-bounty"
         );
-        setDiclosures({ disclosures: latestDisclosures.data.items, loaded: true });
+        setDisclosures({ disclosures: latestDisclosures.data.items, loaded: true });
       } catch (e) {
-        setDiclosures((prev) => ({ ...prev, loaded: true }));
+        setDisclosures((prev) => ({ ...prev, loaded: true }));
       }
       try {
       } catch (e) {}
@@ -81,7 +81,7 @@ const App = () => {
             />
             <Route
               path="/radar"
-              element={<Radar news={news.news} dark={dark} load={news.loaded} />}
+              element={<Radar news={news.news} load={news.loaded} />}
             />
             <Route 
               path="/disclosures" 
